@@ -7,18 +7,18 @@ import NoResults from './NoResults'
 import {IUser} from '../types'
 
 interface IProps {
-    isPostingComment: Boolean,
-    comment: string,
-    setComment: Dispatch<SetStateAction<string>>,
-    addComment: (e: React.FormEvent) => void,
-    comments: IComment[]
+    isPostingComment: Boolean;
+    comment: string;
+    setComment: Dispatch<SetStateAction<string>>;
+    addComment: (e: React.FormEvent) => void;
+    comments: IComment[];
 }
 
 interface IComment {
     comment: string,
     length?: number,
     _key: string;
-    postedBy: {_ref: string, _id: string}
+    postedBy: { _ref?: string; _id?: string };
 }
 
 const Comments = ( {comment, setComment, addComment, comments, isPostingComment} : IProps) => {
