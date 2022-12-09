@@ -13,7 +13,7 @@ interface IProps {
     addComment: (e: React.FormEvent) => void;
     comments: IComment[];
 }
-
+// 
 interface IComment {
     comment: string,
     length?: number,
