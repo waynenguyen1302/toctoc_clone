@@ -6,7 +6,7 @@ import {IUser} from '../types'
 
 const ProfileName = ({user} : {user : IUser}) => {
   return (
-    <div>
+    <>
          <Link href={`/profile/${user._id}`}>
             <div className='flex gap-3 hover:bg-primary p-2 cursor-pointer font-semibold rounded items-center'>
                 <div className='w-10 h-10'>
@@ -29,7 +29,7 @@ const ProfileName = ({user} : {user : IUser}) => {
                 </div>
             </div>                                    
         </Link>
-    </div>
+    </>
   )
 }
 

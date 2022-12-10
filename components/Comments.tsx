@@ -5,6 +5,7 @@ import { GoVerified } from 'react-icons/go'
 import useAuthStore from '../store/authStore'
 import NoResults from './NoResults'
 import {IUser} from '../types'
+import ProfileName from './ProfileName'
 
 interface IProps {
     isPostingComment: Boolean;
@@ -33,7 +34,7 @@ const Comments = ( {comment, setComment, addComment, comments, isPostingComment}
                         {allUsers.map((user : IUser) =>(
                            user._id === (item.postedBy._id || item.postedBy._ref) &&
                             (<div className='p-2 items-center' key={idx}>
-                                <Link href={`/profile/${user._id}`}>
+                                {/* <Link href={`/profile/${user._id}`}>
                                     <div className='flex items-start gap-3'>
                                         <div className='w-8 h-8'>
                                             <Image
@@ -55,8 +56,9 @@ const Comments = ( {comment, setComment, addComment, comments, isPostingComment}
                                             </p>
                                         </div>
                                     </div>                                    
-                                </Link>
-                                <div>
+                                </Link> */}
+                                <ProfileName user={user} />
+                                <div className='px-2 pt-2'>
                                     <p>{item.comment}</p>
                                 </div>
                             </div>)
