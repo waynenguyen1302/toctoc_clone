@@ -25,7 +25,7 @@ const Comments = ( {comment, setComment, addComment, comments, isPostingComment}
     const {userProfile, allUsers} =useAuthStore();
 
   return (
-    <div className='border-t-2 border-gray-200 pt-4 px-10 bg-[#F8F8F8] border-b-2 lg:pb-0 pb-100px]'>
+    <div className='border-t-2 border-gray-200 pt-4 px-10 bg-[#F8F8F8] border-b-2 lg:pb-0 pb-100px lg:h-[450px]'>
         <div className='overflow-scroll lg:h-[475px]'>
             {comments?.length ? (
                 comments.map((item, idx) => (
@@ -37,21 +37,21 @@ const Comments = ( {comment, setComment, addComment, comments, isPostingComment}
                                     <div className='flex items-start gap-3'>
                                         <div className='w-8 h-8'>
                                             <Image
-                                            src={user.image}
-                                            width={34}
-                                            height={34}
-                                            className='rounded-4'
-                                            alt='user profile'
-                                            layout='responsive'
+                                                src={user.image}
+                                                width={34}
+                                                height={34}
+                                                className='rounded-4'
+                                                alt='user profile'
+                                                layout='responsive'
                                             />
                                         </div>
                                         <div className='hidden xl:block'>
                                             <p className='flex gap-1 items-center text-md font-bold text-primary lowercase'>
-                                            {user.userName.replaceAll(' ','')}
-                                            <GoVerified className='text-blue-400' />
+                                                {user.userName.replaceAll(' ','')}
+                                                <GoVerified className='text-blue-400' />
                                             </p>
                                             <p className='capitalize text-gray-400 text-xs'>
-                                            {user.userName}
+                                                {user.userName}
                                             </p>
                                         </div>
                                     </div>                                    
@@ -68,7 +68,7 @@ const Comments = ( {comment, setComment, addComment, comments, isPostingComment}
             )}
         </div>
         {userProfile && (
-            <div className='absolute bottom-0 left-0 pb-6 px-2 md:px-10'>
+            <div className='lg:absolute relative bottom-0 left-0 pb-6 px-2 md:px-10'>
                 <form className='flex gap-4' onSubmit={addComment}>
                     <input
                         value={comment}

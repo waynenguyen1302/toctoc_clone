@@ -91,7 +91,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
               </div>
             </Link>
             <Link href={`/detail/${_id}`}>
-              <p className='mt-2 font-normal '>{caption}</p>
+              <p className='mt-4 font-normal ml-0'>{caption}</p>
             </Link>
           </div>
         </div>
