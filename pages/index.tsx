@@ -29,9 +29,9 @@ export const getServerSideProps = async ({query: { topic }} : {query : { topic :
   
   if(topic) {    
     // filter by topics
-    response = await axios.get(`http://${BASE_URL}/api/discover/${topic}`);
+    response = await axios.get(`${BASE_URL}/api/discover/${topic}`);
   } else {
-    response = await axios.get(`http://${BASE_URL}/api/post`);
+    response = await axios.get(`${BASE_URL}/api/post`);
   }
   
 
