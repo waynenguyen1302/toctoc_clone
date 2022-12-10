@@ -71,11 +71,10 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
                 <Image
                   width={62}
                   height={62}
-                  className=' rounded-full'
+                  className=' rounded'
                   src={postedBy?.image}
                   alt='user-profile'
-                  layout='responsive'
-                />
+                 />
               </>
             </Link>
           </div>
